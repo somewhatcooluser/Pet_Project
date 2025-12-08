@@ -28,6 +28,9 @@ public class Tung implements Brainrot{
 
     public String toString(){
         return(name + " is at " + health + " hp and is " + drowziness + " asleep.");
-
     }
+}
+
+public class Odin implements Brainrot{
+    
 }

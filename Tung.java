@@ -17,12 +17,17 @@ public class Tung implements Brainrot{
 
     public void eat(){
         System.out.println("Tung Yummy");
+        health +=5; //Tung gains health when eating
+
     }
     public void sleep(){
         System.out.println("zzzz");
+        drowziness -=5; //Tung becomes less drowsy
     }
     public void play(){
         System.out.println("Yay");
+        health -=3; //Playing reduces health slightly
+        drowziness +=15; //Playing makes Tung more drowsy
     }
 
 
@@ -31,6 +36,3 @@ public class Tung implements Brainrot{
     }
 }
 
-public class Odin implements Brainrot{
-    
-}

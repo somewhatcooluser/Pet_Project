@@ -11,19 +11,12 @@ interface Brainrot {
 public class Tung implements Brainrot{
     private String name;
     private double health;
-    private double drowziness;
+    private double energy;
 
-    /**
-     * Constructs a new Tung instance with the specified name and initial drowsiness level.
-     * The health is initialized to 100.
-     *
-     * @param name       The name of the Tung instance.
-     * @param drowziness The initial drowsiness level of Tung.
-     */
-    public Tung(String name, double drowziness){
+    public Tung(String name, double energy){
         this.name = name;
         this.health = 100;
-        this.drowziness = drowziness;
+        this.energy = energy;
         
     }
 
@@ -41,7 +34,7 @@ public class Tung implements Brainrot{
      */
     public void sleep(){
         System.out.println("zzzz");
-        drowziness -=5; //Tung becomes less drowsy
+        energy +=5; //Tung becomes less drowsy
     }
 
     /**
@@ -51,7 +44,7 @@ public class Tung implements Brainrot{
     public void play(){
         System.out.println("Yay");
         health -=3; //Playing reduces health slightly
-        drowziness +=15; //Playing makes Tung more drowsy
+        energy -=15; //Playing makes Tung more drowsy
     }
 
 /**
@@ -61,7 +54,7 @@ public class Tung implements Brainrot{
      * @return A string describing the Tung instance.
      */
     public String toString(){
-        return(name + " is at " + health + " hp and is " + drowziness + " asleep.");
+        return(name + " is at " + health + " hp and is " + energy + " asleep.");
     }
 }
 

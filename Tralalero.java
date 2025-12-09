@@ -6,12 +6,12 @@
 public class Tralalero implements Brainrot{
     private String name;
     private double health;
-    private double drowziness;
+    private double energy;
 
-    public Tralalero(String name, double drowziness){
+    public Tralalero(String name, double energy){
         this.name = name;
         this.health = 150;
-        this.drowziness = drowziness;
+        this.energy = energy;
     }
 
     /**
@@ -28,8 +28,8 @@ public class Tralalero implements Brainrot{
      */
     public void sleep(){
         System.out.println("zzzzzzz");
-        drowziness -= 20;
-        health += 10;
+        energy += 50;
+        health += 50;
     }
 
     /**
@@ -38,8 +38,8 @@ public class Tralalero implements Brainrot{
      */
     public void play(){
         System.out.println("Yay Tralalero");
-        health -= 10;
-        drowziness += 30;
+        health += 10;
+        energy -= 30;
     }
 
 /**
@@ -49,6 +49,6 @@ public class Tralalero implements Brainrot{
      * @return A string describing the Tralalero's current state.
      */
     public String toString(){
-        return name + " is at " + health + " hp and is " + drowziness + " asleep.";
+        return name + " is at " + health + " hp and is " + energy + " pts tired";
     }
 }

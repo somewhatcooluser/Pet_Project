@@ -28,8 +28,8 @@ public class Tralalero implements Brainrot{
      */
     public void sleep(){
         System.out.println("zzzzzzz");
-        energy += 50;
-        health += 50;
+        energy += 20;
+        health += 10;
     }
 
     /**
@@ -38,7 +38,7 @@ public class Tralalero implements Brainrot{
      */
     public void play(){
         System.out.println("Yay Tralalero");
-        health += 10;
+        health -= 10;
         energy -= 30;
     }
 
@@ -49,6 +49,6 @@ public class Tralalero implements Brainrot{
      * @return A string describing the Tralalero's current state.
      */
     public String toString(){
-        return name + " is at " + health + " hp and is " + energy + " pts tired";
+        return name + " is at " + health + " hp and is " + energy + " asleep.";
     }
 }

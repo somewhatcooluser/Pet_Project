@@ -16,13 +16,13 @@ public class Tralalero implements Brainrot{
 
     public void sleep(){
         System.out.println("zzzzzzz");
-        drowziness -= 50;
-        health += 50;
+        drowziness -= 20;
+        health += 10;
     }
 
     public void play(){
         System.out.println("Yay Tralalero");
-        health += 10;
+        health -= 10;
         drowziness += 30;
     }
 

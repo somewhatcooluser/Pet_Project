@@ -6,12 +6,12 @@ interface Brainrot {
 public class Tung implements Brainrot{
     private String name;
     private double health;
-    private double drowziness;
+    private double energy;
 
-    public Tung(String name, double drowziness){
+    public Tung(String name, double energy){
         this.name = name;
         this.health = 100;
-        this.drowziness = drowziness;
+        this.energy = energy;
         
     }
 
@@ -22,17 +22,17 @@ public class Tung implements Brainrot{
     }
     public void sleep(){
         System.out.println("zzzz");
-        drowziness -=5; //Tung becomes less drowsy
+        energy +=5; //Tung becomes less drowsy
     }
     public void play(){
         System.out.println("Yay");
         health -=3; //Playing reduces health slightly
-        drowziness +=15; //Playing makes Tung more drowsy
+        energy -=15; //Playing makes Tung more drowsy
     }
 
 
     public String toString(){
-        return(name + " is at " + health + " hp and is " + drowziness + " asleep.");
+        return(name + " is at " + health + " hp and is " + energy + " asleep.");
     }
 }
 

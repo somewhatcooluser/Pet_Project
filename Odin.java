@@ -1,12 +1,12 @@
 public class Odin implements Brainrot{
     private String name;
     private int health;
-    private double drowziness;
+    private double energy;
 
-    public Odin(String name, double drowziness) {
+    public Odin(String name, double energy) {
         this.name = name;
         this.health = 100;
-        this.drowziness = drowziness;
+        this.energy = energy;
     }
 
     public void eat() {
@@ -16,17 +16,17 @@ public class Odin implements Brainrot{
 
     public void sleep() {
         System.out.println("Odin takes a power nap.");
-        drowziness -= 10; // Odin becomes less drowsy
+        energy += 10; // Odin becomes less drowsy
     }
 
     public void play() {
         System.out.println("Odin trains for battle!");
         health -= 5; // Playing reduces health slightly
-        drowziness += 5; // Playing makes Odin more drowsy
+        energy -= 5; // Playing makes Odin more drowsy
     }
 
     public String toString() {
-        return name + " is at " + health + " hp and is " + drowziness + " asleep.";
+        return name + " is at " + health + " hp and is " + energy + " asleep.";
     }
 }
 

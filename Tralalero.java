@@ -1,12 +1,12 @@
 public class Tralalero implements Brainrot{
     private String name;
     private double health;
-    private double sleepiness;
+    private double drowziness;
 
-    public Tralalero(String name, double sleepiness){
+    public Tralalero(String name, double drowziness){
         this.name = name;
         this.health = 150;
-        this.sleepiness = sleepiness;
+        this.drowziness = drowziness;
     }
 
     public void eat(){
@@ -16,18 +16,18 @@ public class Tralalero implements Brainrot{
 
     public void sleep(){
         System.out.println("zzzzzzz");
-        sleepiness -= 50;
-        health += 50;
+        drowziness -= 20;
+        health += 10;
     }
 
     public void play(){
         System.out.println("Yay Tralalero");
-        health += 10;
-        sleepiness += 30;
+        health -= 10;
+        drowziness += 30;
     }
 
 
     public String toString(){
-        return name + " is at " + health + " hp and is " + sleepiness + " pts tired";
+        return name + " is at " + health + " hp and is " + drowziness + " asleep.";
     }
 }

@@ -6,19 +6,12 @@
 public class Tralalero implements Brainrot{
     private String name;
     private double health;
-    private double sleepiness;
+    private double drowziness;
 
-    /**
-     * Constructs a new Tralalero object with the specified name and initial sleepiness level.
-     * The health is initialized to 150.
-     *
-     * @param name       The name of the Tralalero.
-     * @param sleepiness The initial sleepiness level of the Tralalero.
-     */
-    public Tralalero(String name, double sleepiness){
+    public Tralalero(String name, double drowziness){
         this.name = name;
         this.health = 150;
-        this.sleepiness = sleepiness;
+        this.drowziness = drowziness;
     }
 
     /**
@@ -35,8 +28,8 @@ public class Tralalero implements Brainrot{
      */
     public void sleep(){
         System.out.println("zzzzzzz");
-        sleepiness -= 50;
-        health += 50;
+        drowziness -= 20;
+        health += 10;
     }
 
     /**
@@ -45,8 +38,8 @@ public class Tralalero implements Brainrot{
      */
     public void play(){
         System.out.println("Yay Tralalero");
-        health += 10;
-        sleepiness += 30;
+        health -= 10;
+        drowziness += 30;
     }
 
 /**
@@ -56,6 +49,6 @@ public class Tralalero implements Brainrot{
      * @return A string describing the Tralalero's current state.
      */
     public String toString(){
-        return name + " is at " + health + " hp and is " + sleepiness + " pts tired";
+        return name + " is at " + health + " hp and is " + drowziness + " asleep.";
     }
 }

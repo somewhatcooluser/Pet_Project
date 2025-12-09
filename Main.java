@@ -8,30 +8,23 @@ public class Main{
         System.out.println("Type e to open an egg!");
         String input = scanner.nextLine();
         if(input.equals("e")){
+            Brainrot brainrot;
             int brainrotChance = random.nextInt((100 - 1 + 1) + 1);
             if(brainrotChance <= 10){
-                Tung brainrot = new Tung("Tung", 100)
+                brainrot = new Tung("Tung", 100);
             }
             else if(brainrotChance <= 35){
-                Ballerina brainrot = new Ballerina("Ballerina", 100);
+                brainrot = new Ballerina("Ballerina", 100);
             }
             else if(brainrotChance <= 65){
-                Tralaero brainrot = new Tralaero("Tralaero", 100);
+                brainrot = new Tralalero("Tralaero", 100);
             }
             else{
-                Odin brainrot = new Odin("Odin", 100);
+                brainrot = new Odin("Odin", 100);
             }
 
-
-
-
-
-
-
-
-            System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
         }
-
+        System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
 
 
 

@@ -16,13 +16,13 @@ public class Odin implements Brainrot{
 
     public void sleep() {
         System.out.println("Odin takes a power nap.");
-        energy -= 10; // Odin becomes less drowsy
+        energy += 10; // Odin becomes less drowsy
     }
 
     public void play() {
         System.out.println("Odin trains for battle!");
         health -= 5; // Playing reduces health slightly
-        energy += 5; // Playing makes Odin more drowsy
+        energy -= 5; // Playing makes Odin more drowsy
     }
 
     public String toString() {

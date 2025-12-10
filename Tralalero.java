@@ -23,8 +23,8 @@ public class Tralalero implements Brainrot{
     }
 
     /**
-     * Simulates the Tralalero sleeping, which decreases its sleepiness by 50
-     * and increases its health by 50.
+     * Simulates the Tralalero sleeping, which decreases its sleepiness by 20
+     * and increases its health by 10.
      */
     public void sleep(){
         System.out.println("zzzzzzz");

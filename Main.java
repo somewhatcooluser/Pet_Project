@@ -57,6 +57,11 @@ public class Main{
         else if(choice.equals("3")){
             brainrot.play();
         }
+        else{
+            System.out.println("Invalid Option");
+        }
+           
+        
         System.out.println("________________");
         }
         

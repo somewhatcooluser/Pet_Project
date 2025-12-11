@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
+
+
 public class Main{
     public static void main(String[] args) {
         boolean game = true;
@@ -24,15 +26,8 @@ public class Main{
                 brainrot = new Odin("Odin", 100);
             }
 
-
-
-
-
-
-
-
-            System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
         }
+        System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
         while( game == true){
         System.out.println("________________");
         System.out.println(brainrot);
@@ -71,4 +66,12 @@ public class Main{
 
 
 }
+public static void displayBrainrotChances(){
+    System.out.println("Brainrot Chances:");
+    System.out.println("Tung: 10%");
+    System.out.println("Ballerina: 25%");
+    System.out.println("Tralalero: 30%");
+    System.out.println("Odin: 35%");
 }
+}
+

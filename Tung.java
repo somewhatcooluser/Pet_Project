@@ -8,6 +8,13 @@ public class Tung implements Brainrot{
     private int health;
     private int energy;
 
+    /**
+     * Constructs a new Tung object with the specified name and initial energy level.
+     * The health is initialized to 100.
+     *
+     * @param name   The name of the Tung character.
+     * @param energy The initial energy level of the Tung character.
+     */
     public Tung(String name, int energy){
         this.name = name;
         this.health = 100;
@@ -25,7 +32,7 @@ public class Tung implements Brainrot{
     }
 
     /**
-     * Represents the action of sleeping. Sleeping decreases Tung's drowsiness by 5.
+     * Represents the action of sleeping. Sleeping increases Tung's energy by 5.
      */
     public void sleep(){
         System.out.println("zzzz");
@@ -34,7 +41,7 @@ public class Tung implements Brainrot{
 
     /**
      * Represents the action of playing. Playing decreases Tung's health by 3
-     * and increases drowsiness by 15.
+     * and decreases energy by 15.
      */
     public void play(){
         System.out.println("Yay");
@@ -52,28 +59,56 @@ public class Tung implements Brainrot{
         return name + " is at " + health + " hp and has " + energy + " energy.";
     }
 
+    /**
+ * Gets the name of the Tung instance.
+ *
+ * @return The name of the Tung instance.
+ */
     public String getName() {
         return name;
     }
 
+    /**
+ * Sets the name of the Tung instance.
+ *
+ * @param name The new name to set for the Tung instance.
+ */
     public void setName(String name) {
         this.name = name;
     }
 
-    // Getter and Setter for health
+    /**
+ * Gets the health of the Tung instance.
+ *
+ * @return The current health of the Tung instance.
+ */
     public int getHealth() {
         return health;
     }
 
+    /**
+ * Sets the health of the Tung instance.
+ *
+ * @param health The new health value to set for the Tung instance.
+ */
     public void setHealth(int health) {
         this.health = health;
     }
 
-    // Getter and Setter for energy
+    /**
+ * Gets the energy of the Tung instance.
+ *
+ * @return The current energy of the Tung instance.
+ */
     public int getEnergy() {
         return energy;
     }
 
+    /**
+ * Sets the energy of the Tung instance.
+ *
+ * @param energy The new energy value to set for the Tung instance.
+ */
     public void setEnergy(int energy) {
         this.energy = energy;
     }

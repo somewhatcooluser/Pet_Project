@@ -3,17 +3,12 @@
  * Tung has attributes such as name, health, and drowsiness, and can perform actions
  * like eating, sleeping, and playing, which affect these attributes.
  */
-interface Brainrot {
-    public void eat();
-    public void sleep();
-    public void play();
-}
 public class Tung implements Brainrot{
     private String name;
-    private double health;
-    private double energy;
+    private int health;
+    private int energy;
 
-    public Tung(String name, double energy){
+    public Tung(String name, int energy){
         this.name = name;
         this.health = 100;
         this.energy = energy;
@@ -54,7 +49,33 @@ public class Tung implements Brainrot{
      * @return A string describing the Tung instance.
      */
     public String toString(){
-        return(name + " is at " + health + " hp and is " + energy + " asleep.");
+        return name + " is at " + health + " hp and has " + energy + " energy.";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter for health
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    // Getter and Setter for energy
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
     }
 }
 

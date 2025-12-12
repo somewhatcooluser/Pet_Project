@@ -1,9 +1,9 @@
 public class Odin implements Brainrot{
     private String name;
     private int health;
-    private double energy;
+    private int energy;
 
-    public Odin(String name, double energy) {
+    public Odin(String name, int energy) {
         this.name = name;
         this.health = 100;
         this.energy = energy;
@@ -22,11 +22,37 @@ public class Odin implements Brainrot{
     public void play() {
         System.out.println("Odin trains for battle!");
         health -= 5; // Playing reduces health slightly
-        energy -= 5; // Playing makes Odin more drowsy
+        energy -= 10; // Playing makes Odin more drowsy
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter for health
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    // Getter and Setter for energy
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
     }
 
     public String toString() {
-        return name + " is at " + health + " hp and is " + energy + " asleep.";
+        return name + " is at " + health + " hp and has " + energy + " energy.";
     }
 }
 

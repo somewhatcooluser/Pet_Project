@@ -39,7 +39,7 @@ public class Tralalero implements Brainrot {
 
     /**
      * Simulates the Tralalero sleeping.
-     * Sleeping restores energy but slightly decreases health.
+     * Sleeping restores energy and health.
      */
     public void sleep() {
         System.out.println("zzzzzzz");

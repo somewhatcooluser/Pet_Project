@@ -83,12 +83,15 @@ public static void mainGame(Brainrot brainrot){
             System.out.println("Thanks for playing! Goodbye!");
         }
         else if(choice.equals("1")){
+            DerivativeGuess(brainrot);
             brainrot.eat();
         }
         else if(choice.equals("2")){
+            DerivativeGuess(brainrot);
             brainrot.sleep();
         }
         else if(choice.equals("3")){
+            DerivativeGuess(brainrot);
             brainrot.play();
         }
         else{
@@ -118,4 +121,56 @@ public static void mainGame(Brainrot brainrot){
         return brainrot;
  }   
 
+ public static boolean DerivativeGuess(Brainrot brainrot){
+    // creating variables
+    System.out.println("________________");
+    Scanner input = new Scanner(System.in);
+    int coefficent;
+    int power;
+    String variable = "x";
+    int newCoefficent;
+    int newPower;
+    String equation;
+    String newEquation;
+    // creating a random coefficent
+    coefficent = (int)(Math.random()*(10));
+    // creating a radnom power
+    power = (int)(Math.random()*(10));
+    newCoefficent = power * coefficent;
+    newPower = power - 1;
+    //making the new equation
+    if(power == 0){
+        equation = String.valueOf(coefficent);
+    }
+    else if(power == 1){
+        equation = coefficent + variable;
+    }
+    else{
+        equation = coefficent + variable + "^" + power;
+    }
+    if(power == 0){
+        newEquation = "0";
+    }
+    else if(power == 1){
+        newEquation = String.valueOf(coefficent);
+    }
+    else{
+        newEquation = newCoefficent + variable + "^" + newPower;
+    }
+    // loop for the users guesses 
+    System.out.println("Derivative Quiz! Save your brainrot by answering correctly!");
+    System.out.print("What is the derivative for " + equation + "? ");
+    String guess = input.nextLine();
+    if(guess.equals(newEquation)){
+        System.out.println("Correct!!!");
+        System.out.println("Your brainrot is saved!");
+        System.out.println("________________");
+        return true;
+    
+}
+System.out.println("Wrong! The correct answer is " + newEquation + " " + brainrot.getClass().getSimpleName() + " has loss 30 hp :(");
+brainrot.setHealth(brainrot.getHealth() - 30);
+System.out.println("________________");
+return false;
+}
 }

@@ -5,8 +5,9 @@ import javax.imageio.ImageIO;
 
 public class Main{
 
-
+    // Main method: Entry point of the program
     public static void main(String[] args) {
+        // Calls the beginning() method and passes its result to mainGame() to start the game
         mainGame(beginning());
     }
 
@@ -33,29 +34,41 @@ public class Main{
 
 
 
-
+// Method to display the chances of hatching each type of Brainrot
 public static void displayBrainrotChances(){
+    // Print the title for the chances
     System.out.println("Brainrot Chances:");
+    // Print the chance of hatching a Tung
     System.out.println("Tung: 10%");
+    // Print the chance of hatching a Ballerina
     System.out.println("Ballerina: 25%");
+    // Print the chance of hatching a Tralalero
     System.out.println("Tralalero: 30%");
+    // Print the chance of hatching an Odin
     System.out.println("Odin: 35%");
 }
 
-
+// Method to determine which Brainrot is hatched based on random chance
 public static Brainrot brainRotChances(){
+    // Declare a Brainrot variable to store the result
             Brainrot brainrot = null;
+        // Create a Random object to generate random numbers
             Random random = new Random();
+        // Generate a random number between 1 and 100 to determine the type of Brainrot
         int brainrotChance = random.nextInt((100 - 1 + 1) + 1);
+         // Check if the random number falls within the range for hatching a Tung
             if(brainrotChance <= 10){
                 return brainrot = new Tung("Tung", 100);
             }
+        // Check if the random number falls within the range for hatching a Ballerina
             else if(brainrotChance <= 35){
                 return brainrot = new Ballerina("Ballerina", 100);
             }
+        // Check if the random number falls within the range for hatching a Tralalero
             else if(brainrotChance <= 65){
                 return brainrot = new Tralalero("Tralaero", 100);
             }
+        // If the random number is greater than 65, hatch an Odin
             else{
                 return brainrot = new Odin("Odin", 100);
             }
@@ -108,18 +121,32 @@ public static void mainGame(Brainrot brainrot){
 
 }
 }
- public static Brainrot beginning(){
+public static Brainrot beginning(){
+    // Create a Scanner object for user input
     Scanner scanner = new Scanner(System.in);
+    // Declare a Brainrot variable to store the hatched Brainrot
     Brainrot brainrot = null;
-        System.out.println("Welcome to Brainrot world!");
-        System.out.println("Type e to open an egg!");
-        String input = scanner.nextLine();
-        if(input.equals("e")){
-            brainrot = brainRotChances();
-        }
-        System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
-        return brainrot;
- }   
+    
+    // Print welcome message and instructions
+    System.out.println("Welcome to Brainrot world!");
+    System.out.println("Type e to open an egg!");
+    
+    // Get user input
+    String input = scanner.nextLine();
+    
+    // Check if the user typed "e" to open an egg
+    if(input.equals("e")){
+        // Call brainRotChances() to determine which Brainrot is hatched
+        brainrot = brainRotChances();
+    }
+    
+    // Print a message congratulating the user on hatching a Brainrot
+    System.out.println("Congratulations! You have hatched " + (brainrot.getClass().getSimpleName()) + "!");
+    
+    // Return the hatched Brainrot
+    return brainrot;
+}   
+
 
  public static boolean DerivativeGuess(Brainrot brainrot){
     // creating variables

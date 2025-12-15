@@ -44,7 +44,7 @@ public class Tralalero implements Brainrot {
     public void sleep() {
         System.out.println("zzzzzzz");
         energy += 15;
-        health -= 10;
+        health += 10;
     }
 
     /**

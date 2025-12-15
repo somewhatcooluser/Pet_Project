@@ -95,7 +95,7 @@ public static void mainGame(Brainrot brainrot){
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
-        }
+        
         System.out.println("________________");
         
         if( brainrot.getHealth() <= 0 || brainrot.getEnergy() <= 0){

@@ -78,12 +78,15 @@ public static void mainGame(Brainrot brainrot){
     String choice = scanner.nextLine();
         switch(choice){
             case "1":
+                DerivativeGuess(brainrot);
                 brainrot.eat();
                 break;
             case "2":
+                DerivativeGuess(brainrot);
                 brainrot.sleep();
                 break;
             case "3":
+                DerivativeGuess(brainrot);
                 brainrot.play();
                 break;
             case "4":
@@ -96,26 +99,8 @@ public static void mainGame(Brainrot brainrot){
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
-<<<<<<< HEAD
-=======
-        else if(choice.equals("1")){
-            DerivativeGuess(brainrot);
-            brainrot.eat();
-        }
-        else if(choice.equals("2")){
-            DerivativeGuess(brainrot);
-            brainrot.sleep();
-        }
-        else if(choice.equals("3")){
-            DerivativeGuess(brainrot);
-            brainrot.play();
-        }
-        else{
-            System.out.println("Invalid Option");
-        }
            
         
->>>>>>> 2624eb223389519f76df83498e8a12b069a047fc
         System.out.println("________________");
         
         if( brainrot.getHealth() <= 0 || brainrot.getEnergy() <= 0){

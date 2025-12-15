@@ -94,6 +94,9 @@ public static void mainGame(Brainrot brainrot){
             DerivativeGuess(brainrot);
             brainrot.play();
         }
+        else if(choice.equals("5")){
+            displayBrainrotChances();
+        }
         else{
             System.out.println("Invalid Option");
         }
@@ -133,8 +136,8 @@ public static void mainGame(Brainrot brainrot){
     String equation;
     String newEquation;
     // creating a random coefficent
-    coefficent = (int)(Math.random()*(10));
-    // creating a radnom power
+    coefficent = (int)(Math.random()*(10)+1);
+    // creating a random power
     power = (int)(Math.random()*(10));
     newCoefficent = power * coefficent;
     newPower = power - 1;

@@ -1,19 +1,25 @@
 /**
- * The Odin class represents a character with a name, health, and energy level.
- * It provides methods to simulate actions such as eating, sleeping, and playing,
- * which affect the character's health and energy.
+ * The Odin class represents a powerful Brainrot character
+ * with a name, health, and energy.
+ * It defines Odin's unique behavior when eating, sleeping, and playing.
  */
-public class Odin implements Brainrot{
+public class Odin implements Brainrot {
+
+    // Stores Odin's name
     private String name;
+
+    // Stores Odin's current health
     private int health;
+
+    // Stores Odin's current energy
     private int energy;
 
     /**
-     * Constructs a new Odin object with the specified name and initial energy level.
-     * The health is initialized to 100.
+     * Constructs a new Odin with a name and starting energy.
+     * Health is initialized to 100.
      *
-     * @param name   The name of the Odin character.
-     * @param energy The initial energy level of the Odin character.
+     * @param name   the name of Odin
+     * @param energy the starting energy value
      */
     public Odin(String name, int energy) {
         this.name = name;
@@ -22,94 +28,93 @@ public class Odin implements Brainrot{
     }
 
     /**
-     * Simulates Odin eating. Eating increases health by 10.
+     * Simulates Odin eating.
+     * Eating increases health.
      */
     public void eat() {
         System.out.println("Odin devours his meal!");
-        health += 10; // Odin gains health when eating
+        health += 10;
     }
 
     /**
-     * Simulates Odin sleeping. Sleeping increases energy by 10.
+     * Simulates Odin sleeping.
+     * Sleeping restores energy.
      */
     public void sleep() {
         System.out.println("Odin takes a power nap.");
-        energy += 10; // Odin becomes less drowsy
+        energy += 10;
     }
 
     /**
-     * Simulates Odin playing. Playing decreases health by 5
-     * and decreases energy by 10.
+     * Simulates Odin playing.
+     * Playing slightly decreases health and energy.
      */
     public void play() {
         System.out.println("Odin trains for battle!");
-        health -= 5; // Playing reduces health slightly
-        energy -= 10; // Playing makes Odin more drowsy
+        health -= 5;
+        energy -= 10;
     }
 
-    
     /**
-     * Gets the name of the Odin character.
+     * Returns Odin's name.
      *
-     * @return The name of the Odin character.
+     * @return the name of Odin
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Sets the name of the Odin character.
+     * Sets Odin's name.
      *
-     * @param name The new name to set for the Odin character.
+     * @param name the new name for Odin
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Gets the health of the Odin character.
+     * Returns the current health value.
      *
-     * @return The current health of the Odin character.
+     * @return Odin's health
      */
     public int getHealth() {
         return health;
     }
 
     /**
-     * Sets the health of the Odin character.
+     * Sets the health value.
      *
-     * @param health The new health value to set for the Odin character.
+     * @param health the new health value
      */
     public void setHealth(int health) {
         this.health = health;
     }
 
     /**
-     * Gets the energy of the Odin character.
+     * Returns the current energy value.
      *
-     * @return The current energy of the Odin character.
+     * @return Odin's energy
      */
     public int getEnergy() {
         return energy;
     }
 
     /**
-     * Sets the energy of the Odin character.
+     * Sets the energy value.
      *
-     * @param energy The new energy value to set for the Odin character.
+     * @param energy the new energy value
      */
     public void setEnergy(int energy) {
         this.energy = energy;
     }
 
     /**
-     * Returns a string representation of the Odin character, including its name,
-     * health, and energy levels.
+     * Returns a string representation of Odin.
      *
-     * @return A string describing the Odin character's current state.
+     * @return a string describing Odin's current state
      */
     public String toString() {
         return name + " is at " + health + " hp and has " + energy + " energy.";
     }
 }
-

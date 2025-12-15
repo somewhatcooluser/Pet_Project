@@ -95,16 +95,15 @@ public static void mainGame(Brainrot brainrot){
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
-        
+        }
         System.out.println("________________");
         
         if( brainrot.getHealth() <= 0 || brainrot.getEnergy() <= 0){
             System.out.println("R.I.P. " + brainrot.getClass() + ". Your brainrot has passed away due to lack of care :( .");
         }
-        
+}
+    }
 
-}
-}
  public static Brainrot beginning(){
     Scanner scanner = new Scanner(System.in);
     Brainrot brainrot = null;

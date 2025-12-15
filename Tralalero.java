@@ -29,7 +29,7 @@ public class Tralalero implements Brainrot{
     public void sleep(){
         System.out.println("zzzzzzz");
         energy += 15;
-        health += 10;
+        health -= 10;
     }
 
     /**
@@ -38,7 +38,7 @@ public class Tralalero implements Brainrot{
      */
     public void play(){
         System.out.println("Yay Tralalero");
-        health += 10;
+        health -= 10;
         energy -= 30;
     }
 

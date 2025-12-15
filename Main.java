@@ -94,12 +94,11 @@ public static void mainGame(Brainrot brainrot){
             DerivativeGuess(brainrot);
             brainrot.play();
         }
-        else if(choice.equals("5")){
-            displayBrainrotChances();
-        }
         else{
-            System.out.println("Invalid choice. Please try again.");
+            System.out.println("Invalid Option");
         }
+           
+        
         System.out.println("________________");
         
         if( brainrot.getHealth() <= 0 && brainrot.getEnergy() <= 0){
